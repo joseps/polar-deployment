@@ -17,7 +17,7 @@ ping 127.0.0.1 -n 6 > nul
 
 echo "Waiting for Keycloak to be deployed..."
 
-kubectl wait --for=condition=ready pod --selector=app=polar-keycloak --timeout=300s
+kubectl wait --for=condition=ready pod --selector=app=polar-keycloak --timeout=60s
 
 echo "Ensuring Keycloak Ingress is created..."
 
@@ -31,7 +31,7 @@ ping 127.0.0.1 -n 6 > nul
 
 echo "Waiting for PostgreSQL to be deployed..."
 
-kubectl wait --for=condition=ready pod --selector=db=polar-postgres --timeout=180s
+kubectl wait --for=condition=ready pod --selector=db=polar-postgres --timeout=60s
 
 echo "Deploying Redis..."
 
@@ -44,7 +44,7 @@ echo "Waiting for Redis to be deployed..."
 
 echo "Waiting for Redis to be ready..."
 
-kubectl wait --for=condition=ready pod --selector=db=polar-redis --timeout=180s
+kubectl wait --for=condition=ready pod --selector=db=polar-redis --timeout=60s
 
 echo "Deploying RabbitMQ..."
 
@@ -55,7 +55,7 @@ ping 127.0.0.1 -n 6 > nul
 
 echo "Waiting for RabbitMQ to be ready..."
 
-kubectl wait --for=condition=ready pod --selector=db=polar-rabbitmq --timeout=180s
+kubectl wait --for=condition=ready pod --selector=db=polar-rabbitmq --timeout=60s
 
 echo "Deploying Polar UI..."
 
@@ -65,6 +65,6 @@ ping 127.0.0.1 -n 6 > nul
 
 echo "Waiting for Polar UI to be deployed..."
 
-kubectl wait --for=condition=ready pod --selector=app=polar-ui --timeout=180s
+kubectl wait --for=condition=ready pod --selector=app=polar-ui --timeout=60s
 
 echo "Happy Sailing!"
