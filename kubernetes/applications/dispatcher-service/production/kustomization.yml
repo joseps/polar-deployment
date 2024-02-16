@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - github.com/joseps/dispatcher-service/k8s?ref=main
+  - github.com/joseps/dispatcher-service/k8s?ref=019432e91cdeb9e356d1852ca2bf0b06765cb612
 
 patchesStrategicMerge:
   - patch-env.yml

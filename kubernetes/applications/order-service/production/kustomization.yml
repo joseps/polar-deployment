@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - github.com/joseps/order-service/k8s?ref=main
+  - github.com/joseps/order-service/k8s?ref=da3a5c865467583045871ab40c3686a5130cf1ff
 
 patchesStrategicMerge:
   - patch-env.yml
