@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - github.com/polarbookshop/order-service/k8s?ref=main
+  - github.com/joseps/order-service/k8s?ref=main
 
 patchesStrategicMerge:
   - patch-env.yml
@@ -17,7 +17,7 @@ configMapGenerator:
 
 images:
   - name: order-service
-    newName: ghcr.io/polarbookshop/order-service
+    newName: ghcr.io/joseps/order-service
     newTag: latest
 
 replicas:
